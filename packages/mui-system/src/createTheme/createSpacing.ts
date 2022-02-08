@@ -15,6 +15,7 @@ export type SpacingArgument = number | string;
 export interface Spacing {
   (): string;
   (value: number): string;
+  (value: number, { unitType }: { unitType: 'number' }): number;
   (topBottom: SpacingArgument, rightLeft: SpacingArgument): string;
   (top: SpacingArgument, rightLeft: SpacingArgument, bottom: SpacingArgument): string;
   (
@@ -39,7 +40,9 @@ export default function createSpacing(spacingInput: SpacingOptions = 8): Spacing
     spacing: spacingInput,
   });
 
-  const spacing = (...argsInput: ReadonlyArray<number | string>): string => {
+  const spacing = (
+    ...argsInput: ReadonlyArray<number | string | { unitType: 'number' }>
+  ): number | string => {
     if (process.env.NODE_ENV !== 'production') {
       if (!(argsInput.length <= 4)) {
         console.error(
@@ -48,11 +51,18 @@ export default function createSpacing(spacingInput: SpacingOptions = 8): Spacing
       }
     }
 
+    if (typeof argsInput[1] === 'object') {
+      if (argsInput[1].unitType === 'number') {
+        const output = transform(argsInput[0] as number);
+        return output!;
+      }
+    }
+
     const args = argsInput.length === 0 ? [1] : argsInput;
 
     return args
       .map((argument) => {
-        const output = transform(argument);
+        const output = transform(argument as SpacingArgument);
         return typeof output === 'number' ? `${output}px` : output;
       })
       .join(' ');
@@ -60,5 +70,5 @@ export default function createSpacing(spacingInput: SpacingOptions = 8): Spacing
 
   spacing.mui = true;
 
-  return spacing;
+  return spacing as Spacing;
 }
