@@ -96,7 +96,7 @@ const theme = createTheme({
       main: '#f57c00',
       dark: '#ef6c00',
       contrastText: 'rgba(0, 0, 0, 0.87)',
-    }
+    },
     // Used by `getContrastText()` to maximize the contrast between
     // the background and the text.
     contrastThreshold: 3,
