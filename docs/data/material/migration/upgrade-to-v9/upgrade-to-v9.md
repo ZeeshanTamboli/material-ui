@@ -277,11 +277,11 @@ Selecting a `MenuItem` will update the focus and `tabindex` as before.
 
 The `autoFocus` prop in `MenuList` does not set `tabindex="0"` on the `List` component anymore. It will always stay as `-1`.
 
-### Deprecated APIs removed
+## Deprecated APIs removed
 
 APIs that were deprecated earlier have been removed in v9.
 
-#### Autocomplete deprecated props removed
+### Autocomplete deprecated props removed
 
 Use the [autocomplete-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#autocomplete-props) below to migrate the code as described in the following section:
 
@@ -349,7 +349,7 @@ The following deprecated props have been removed from the `Autocomplete` compone
 
 ---
 
-#### useAutocomplete deprecated fields removed
+### useAutocomplete deprecated fields removed
 
 Use the [autocomplete-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#autocomplete-props) below to migrate the code as described in the following section:
 
@@ -362,7 +362,7 @@ The following deprecated members have been removed from the `useAutocomplete` ho
 - `getTagProps` → use `getItemProps`
 - `focusedTag` → use `focusedItem`
 
-##### getTagProps
+#### getTagProps
 
 ```diff
  const {
@@ -375,7 +375,7 @@ The following deprecated members have been removed from the `useAutocomplete` ho
 +<Chip {...getItemProps({ index })} />
 ```
 
-##### focusedTag
+#### focusedTag
 
 ```diff
  const {
@@ -384,7 +384,7 @@ The following deprecated members have been removed from the `useAutocomplete` ho
  } = useAutocomplete(props);
 ```
 
-#### Alert deprecated CSS classes removed
+### Alert deprecated CSS classes removed
 
 Use the [alert-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#alert-classes) below to migrate the code as described in the following section:
 
@@ -448,7 +448,7 @@ If you were using these deprecated class names as `styleOverrides` keys in your 
  });
 ```
 
-#### Alert deprecated props removed
+### Alert deprecated props removed
 
 Use the [alert-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#alert-props) below to migrate the code as described in the following section:
 
@@ -471,7 +471,7 @@ The following deprecated props have been removed from the `Alert` component:
  />
 ```
 
-#### Accordion deprecated props removed
+### Accordion deprecated props removed
 
 Use the [accordion-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#accordion-props) below to migrate the code as described in the following section:
 
@@ -493,7 +493,7 @@ The following deprecated props have been removed from the `Accordion` component:
  >
 ```
 
-#### AccordionSummary deprecated CSS classes removed
+### AccordionSummary deprecated CSS classes removed
 
 Use the [accordion-summary-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#accordion-summary-classes) below to migrate the code as described in the following section:
 
@@ -511,7 +511,7 @@ Use the combination of `.MuiAccordionSummary-gutters` and `.MuiAccordionSummary-
  }
 ```
 
-#### Avatar deprecated props removed
+### Avatar deprecated props removed
 
 Use the [avatar-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#avatar-props) below to migrate the code as described in the following section:
 
@@ -528,7 +528,7 @@ The following deprecated props have been removed from the `Avatar` component:
 +<Avatar slotProps={{ img: { crossOrigin: 'anonymous', referrerPolicy: 'no-referrer' } }} />
 ```
 
-#### AvatarGroup deprecated props removed
+### AvatarGroup deprecated props removed
 
 Use the [avatar-group-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#avatar-group-props) below to migrate the code as described in the following section:
 
@@ -552,7 +552,7 @@ If you were already using the `surplus` key via `componentsProps`, move it to `s
 +<AvatarGroup slotProps={{ surplus: { className: 'my-class' } }}>
 ```
 
-#### Backdrop deprecated props removed
+### Backdrop deprecated props removed
 
 Use the [backdrop-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#backdrop-props) below to migrate the code as described in the following section:
 
@@ -575,7 +575,7 @@ The following deprecated `Backdrop` props have been removed:
 +  slotProps={{ root: { className: 'my-class' } }}
 ```
 
-#### Badge deprecated props removed
+### Badge deprecated props removed
 
 Use the [badge-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#badge-props) below to migrate the code as described in the following section:
 
@@ -597,7 +597,7 @@ The following deprecated props have been removed from the `Badge` component:
  />
 ```
 
-#### Button deprecated CSS classes removed
+### Button deprecated CSS classes removed
 
 Use the [button-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#button-classes) below to migrate the code as described in the following section:
 
@@ -724,7 +724,7 @@ If you were using these deprecated class names as `styleOverrides` keys in your 
  });
 ```
 
-#### ButtonGroup deprecated CSS classes removed
+### ButtonGroup deprecated CSS classes removed
 
 Use the [button-group-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#button-group-classes) below to migrate the code as described in the following section:
 
@@ -776,7 +776,7 @@ If you were using these deprecated class names as `styleOverrides` keys in your 
  });
 ```
 
-#### Checkbox deprecated props removed
+### Checkbox deprecated props removed
 
 Use the [checkbox-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#checkbox-props) below to migrate the code as described in the following section:
 
@@ -797,7 +797,7 @@ The following deprecated `Checkbox` props have been removed:
  />
 ```
 
-#### Chip deprecated CSS classes removed
+### Chip deprecated CSS classes removed
 
 Use the [chip-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#chip-classes) below to migrate the code as described in the following section:
 
@@ -871,7 +871,7 @@ The `label` slot is a proper styled component and can use `variants` directly in
  });
 ```
 
-#### CircularProgress deprecated CSS classes removed
+### CircularProgress deprecated CSS classes removed
 
 Use the [circular-progress-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#circular-progress-classes) below to migrate the code as described in the following section:
 
@@ -911,7 +911,7 @@ If you were using these deprecated class names as `styleOverrides` keys in your 
  });
 ```
 
-#### Dialog deprecated CSS classes removed
+### Dialog deprecated CSS classes removed
 
 Use the [dialog-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#dialog-classes) below to migrate the code as described in the following section:
 
@@ -959,7 +959,7 @@ If you were using these classes in `styleOverrides`, use the `variants` array in
  });
 ```
 
-#### Dialog deprecated props removed
+### Dialog deprecated props removed
 
 Use the [dialog-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#dialog-props) below to migrate the code as described in the following section:
 
@@ -987,7 +987,7 @@ The following deprecated props have been removed from the `Dialog` component:
  />
 ```
 
-#### Drawer deprecated props removed
+### Drawer deprecated props removed
 
 Use the [drawer-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#drawer-props) below to migrate the code as described in the following section:
 
@@ -1015,7 +1015,7 @@ The following deprecated props have been removed from the `Drawer` component:
  />
 ```
 
-#### Drawer deprecated classes removed
+### Drawer deprecated classes removed
 
 Use the [drawer-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#drawer-classes) below to migrate the code as described in the following section:
 
@@ -1042,7 +1042,7 @@ The following deprecated classes have been removed:
 +.MuiDrawer-anchorLeft.MuiDrawer-docked > .MuiDrawer-paper
 ```
 
-#### Divider deprecated props removed
+### Divider deprecated props removed
 
 Use the [codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#divider-props) below to migrate the code as described in the following sections:
 
@@ -1060,7 +1060,7 @@ Use `sx={{ opacity : "0.6" }}` (or any opacity):
  />
 ```
 
-#### Divider deprecated classes removed
+### Divider deprecated classes removed
 
 The following deprecated class has been removed:
 
@@ -1071,7 +1071,7 @@ The following deprecated class has been removed:
 +.MuiDivider-withChildren.MuiDivider-vertical
 ```
 
-#### ImageListItemBar deprecated CSS classes removed
+### ImageListItemBar deprecated CSS classes removed
 
 Use the [image-list-item-bar-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#image-list-item-bar-classes) below to migrate the code as described in the following section:
 
@@ -1086,7 +1086,7 @@ The following deprecated `ImageListItemBar` CSS classes have been removed:
 - `titleWrapActionPosRight` → use `.MuiImageListItemBar-titleWrap` with `.MuiImageListItemBar-actionPositionRight` on the root
 - `actionIconActionPosLeft` → use `.MuiImageListItemBar-actionIcon` with `.MuiImageListItemBar-actionPositionLeft` on the root
 
-#### FormControlLabel deprecated props removed
+### FormControlLabel deprecated props removed
 
 Use the [form-control-label-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#form-control-label-props) below to migrate the code as described in the following section:
 
@@ -1105,7 +1105,7 @@ The following deprecated prop has been removed:
  />
 ```
 
-#### FilledInput deprecated props removed
+### FilledInput deprecated props removed
 
 Use the [filled-input-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#filled-input-props) below to migrate the code as described in the following section:
 
@@ -1127,7 +1127,7 @@ The following deprecated `FilledInput` props have been removed:
  />
 ```
 
-#### Input deprecated props removed
+### Input deprecated props removed
 
 Use the [input-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#input-props) below to migrate the code as described in the following section:
 
@@ -1149,7 +1149,7 @@ The following deprecated `Input` props have been removed:
  />
 ```
 
-#### InputBase deprecated CSS classes removed
+### InputBase deprecated CSS classes removed
 
 Use the [input-base-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#input-base-classes) below to migrate the code as described in the following section:
 
@@ -1192,7 +1192,7 @@ If you were using these deprecated class names as `styleOverrides` keys in your 
  });
 ```
 
-#### InputBase deprecated props removed
+### InputBase deprecated props removed
 
 Use the [input-base-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#input-base-props) below to migrate the code as described in the following section:
 
@@ -1214,7 +1214,7 @@ The following deprecated `InputBase` props have been removed:
  />
 ```
 
-#### LinearProgress deprecated CSS classes removed
+### LinearProgress deprecated CSS classes removed
 
 Use the [linear-progress-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#linear-progress-classes) below to migrate the code as described in the following section:
 
@@ -1269,7 +1269,7 @@ If you were using these deprecated class names as `styleOverrides` keys in your 
  });
 ```
 
-#### ListItem deprecated props removed
+### ListItem deprecated props removed
 
 Use the [list-item-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#list-item-props) below to migrate the code as described in the following section:
 
@@ -1314,7 +1314,7 @@ The theming `styleOverrides` key `secondaryAction` now targets the `secondaryAct
  });
 ```
 
-#### ListItemText deprecated props removed
+### ListItemText deprecated props removed
 
 Use the [list-item-text-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#list-item-text-props) below to migrate the code as described in the following section:
 
@@ -1338,7 +1338,7 @@ The following deprecated props have been removed:
  />
 ```
 
-#### OutlinedInput deprecated props removed
+### OutlinedInput deprecated props removed
 
 Use the [outlined-input-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#outlined-input-props) below to migrate the code as described in the following section:
 
@@ -1360,7 +1360,7 @@ The following deprecated `OutlinedInput` props have been removed:
  />
 ```
 
-#### PaginationItem deprecated props removed
+### PaginationItem deprecated props removed
 
 Use the [pagination-item-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#pagination-item-props) below to migrate the code as described in the following section:
 
@@ -1389,7 +1389,7 @@ The following deprecated props have been removed:
  />
 ```
 
-#### PaginationItem deprecated classes removed
+### PaginationItem deprecated classes removed
 
 Use the [pagination-item-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#pagination-item-classes) below to migrate the code as described in the following section:
 
@@ -1412,7 +1412,7 @@ The following deprecated classes have been removed:
 +.MuiPaginationItem-outlined.MuiPaginationItem-colorPrimary
 ```
 
-#### Popper deprecated props removed
+### Popper deprecated props removed
 
 Use the [popper-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#popper-props) below to migrate the code as described in the following section:
 
@@ -1434,7 +1434,7 @@ The following deprecated props have been removed:
  />
 ```
 
-#### Radio deprecated props removed
+### Radio deprecated props removed
 
 Use the [radio-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#radio-props) below to migrate the code as described in the following section:
 
@@ -1455,7 +1455,7 @@ The following deprecated `Radio` props have been removed:
  />
 ```
 
-#### Select deprecated CSS classes removed
+### Select deprecated CSS classes removed
 
 Use the [select-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#select-classes) below to migrate the code as described in the following section:
 
@@ -1498,7 +1498,7 @@ If you were using these deprecated class names as `styleOverrides` in your theme
  });
 ```
 
-#### Slider deprecated props removed
+### Slider deprecated props removed
 
 Use the [slider-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#slider-props) below to migrate the code as described in the following section:
 
@@ -1520,7 +1520,7 @@ The following deprecated props have been removed from the `Slider` component:
  />
 ```
 
-#### Slider deprecated classes removed
+### Slider deprecated classes removed
 
 Use the [slider-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#slider-classes) below to migrate the code as described in the following section:
 
@@ -1549,7 +1549,7 @@ The following deprecated classes have been removed:
 +.MuiSlider-sizeSmall > .MuiSlider-thumb
 ```
 
-#### Snackbar deprecated props removed
+### Snackbar deprecated props removed
 
 Use the [snackbar-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#snackbar-props) below to migrate the code as described in the following section:
 
@@ -1579,7 +1579,7 @@ The following deprecated `Snackbar` props have been removed:
  />
 ```
 
-#### StepConnector deprecated CSS classes removed
+### StepConnector deprecated CSS classes removed
 
 Use the [step-connector-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#step-connector-classes) below to migrate the code as described in the following section:
 
@@ -1613,7 +1613,7 @@ If you were using these deprecated class names as `styleOverrides` keys in your 
  });
 ```
 
-#### StepContent deprecated props removed
+### StepContent deprecated props removed
 
 Use the [step-content-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#step-content-props) below to migrate the code as described in the following section:
 
@@ -1635,7 +1635,7 @@ The following deprecated `StepContent` props have been removed:
  />
 ```
 
-#### StepLabel deprecated props removed
+### StepLabel deprecated props removed
 
 Use the [step-label-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#step-label-props) below to migrate the code as described in the following section:
 
@@ -1659,7 +1659,7 @@ The following deprecated `StepLabel` props have been removed:
  />
 ```
 
-#### TablePagination deprecated props removed
+### TablePagination deprecated props removed
 
 Use the [table-pagination-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#table-pagination-props) below to migrate the code as described in the following section:
 
@@ -1688,7 +1688,7 @@ The following deprecated props have been removed:
  />
 ```
 
-#### TableSortLabel deprecated classes removed
+### TableSortLabel deprecated classes removed
 
 Use the [table-sort-label-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#table-sort-label-classes) below to migrate the code as described in the following section:
 
@@ -1730,7 +1730,7 @@ If you were using these deprecated class names as `styleOverrides` keys in your 
  });
 ```
 
-#### SpeedDial deprecated props removed
+### SpeedDial deprecated props removed
 
 Use the [speed-dial-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#speed-dial-props) below to migrate the code as described in the following section:
 
@@ -1750,7 +1750,7 @@ Use the `slots` and `slotProps` props instead:
  >
 ```
 
-#### SpeedDialAction deprecated props removed
+### SpeedDialAction deprecated props removed
 
 Use the [speed-dial-action-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#speed-dial-action-props) below to migrate the code as described in the following section:
 
@@ -1778,7 +1778,7 @@ Use the `slotProps` prop instead:
 +    },
 ```
 
-#### Menu deprecated props removed
+### Menu deprecated props removed
 
 Use the [menu-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#menu-props) below to migrate the code as described in the following section:
 
@@ -1822,7 +1822,7 @@ If you pass these props via `Select`'s `MenuProps`, update them the same way:
  />
 ```
 
-#### MobileStepper deprecated props removed
+### MobileStepper deprecated props removed
 
 Use the [mobile-stepper-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#mobile-stepper-props) below to migrate the code as described in the following section:
 
@@ -1841,7 +1841,7 @@ The following deprecated props have been removed:
  />
 ```
 
-#### Modal deprecated props removed
+### Modal deprecated props removed
 
 Use the [modal-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#modal-props) below to migrate the code as described in the following section:
 
@@ -1867,7 +1867,7 @@ The following deprecated props have been removed from the `Modal` component:
  />
 ```
 
-#### Popover deprecated props removed
+### Popover deprecated props removed
 
 Use the [popover-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#popover-props) below to migrate the code as described in the following section:
 
@@ -1899,7 +1899,7 @@ The following deprecated props have been removed:
  />
 ```
 
-#### Rating deprecated props removed
+### Rating deprecated props removed
 
 Use the [rating-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#rating-props) below to migrate the code as described in the following section:
 
@@ -1918,7 +1918,7 @@ The following deprecated prop has been removed:
  />
 ```
 
-#### Switch deprecated props removed
+### Switch deprecated props removed
 
 Use the [switch-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#switch-props) below to migrate the code as described in the following section:
 
@@ -1939,7 +1939,7 @@ The following deprecated `Switch` props have been removed:
  />
 ```
 
-#### SwipeableDrawer deprecated props removed
+### SwipeableDrawer deprecated props removed
 
 Use the [drawer-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#drawer-props) below to migrate the code as described in the following section:
 
@@ -1963,7 +1963,7 @@ The following deprecated props have been removed from the `SwipeableDrawer` comp
  />
 ```
 
-#### Tabs deprecated props removed
+### Tabs deprecated props removed
 
 Use the [tabs-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#tabs-props) below to migrate the code as described in the following section:
 
@@ -1999,7 +1999,7 @@ The following deprecated props have been removed:
  />
 ```
 
-#### Tab deprecated classes removed
+### Tab deprecated classes removed
 
 Use the [tab-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#tab-classes) below to migrate the code as described in the following section:
 
@@ -2016,7 +2016,7 @@ The following deprecated class has been removed:
 +.MuiTab-icon
 ```
 
-#### Tabs deprecated classes removed
+### Tabs deprecated classes removed
 
 The following deprecated classes have been removed:
 
@@ -2031,7 +2031,7 @@ The following deprecated classes have been removed:
 +.MuiTabs-list.MuiTabs-vertical
 ```
 
-#### ToggleButtonGroup deprecated CSS classes removed
+### ToggleButtonGroup deprecated CSS classes removed
 
 Use the [toggle-button-group-classes codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#toggle-button-group-classes) below to migrate the code as described in the following section:
 
@@ -2065,7 +2065,7 @@ If you were using these deprecated class names as `styleOverrides` keys in your 
  });
 ```
 
-#### TextField deprecated props removed
+### TextField deprecated props removed
 
 Use the [text-field-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#text-field-props) below to migrate the code as described in the following section:
 
@@ -2125,7 +2125,7 @@ If you render a `TextField` from `Autocomplete`, the `params` shape also changed
    )}
 ```
 
-#### Tooltip deprecated props removed
+### Tooltip deprecated props removed
 
 Use the [tooltip-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#tooltip-props) below to migrate the code as described in the following section:
 
@@ -2161,7 +2161,7 @@ The following deprecated props have been removed from the `Tooltip` component:
  />
 ```
 
-#### CardHeader deprecated props removed
+### CardHeader deprecated props removed
 
 Use the [card-header-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#card-header-props) below to migrate the code as described in the following section:
 
@@ -2182,7 +2182,7 @@ The following deprecated props have been removed from the `CardHeader` component
  />
 ```
 
-#### Typography deprecated CSS classes removed
+### Typography deprecated CSS classes removed
 
 The deprecated `paragraph` CSS class has been removed.
 Use CSS `.MuiTypography-root:where(p)` to apply custom styles for the paragraph element instead:
@@ -2196,7 +2196,7 @@ Use CSS `.MuiTypography-root:where(p)` to apply custom styles for the paragraph 
 +}
 ```
 
-#### Typography deprecated props removed
+### Typography deprecated props removed
 
 Use the [typography-props codemod](https://github.com/mui/material-ui/tree/HEAD/packages/mui-codemod#typography-props) below to migrate the code as described in the following section:
 
@@ -2213,7 +2213,7 @@ The following deprecated props have been removed from the `Typography` component
 +<Typography sx={{ marginBottom: '16px' }} />
 ```
 
-#### System props removed
+### System props removed
 
 Use the [system-props codemod](/material-ui/migration/migrating-from-deprecated-apis/#system-props) below to migrate the code as described in the following section:
 
